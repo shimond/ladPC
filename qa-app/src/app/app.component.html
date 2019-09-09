@@ -1,0 +1,34 @@
+<div class="app-container">
+  <div>
+    <app-question-list [questions]="questions" (selectQuestionRequested)="onSelectQuestionRequested($event)"
+      [selectedQuestion]="selectedQuestion"></app-question-list>
+  </div>
+  <div>
+    <app-question-viewer *ngIf="selectedQuestion" [question]="selectedQuestion" (userAnswered)="onUserAnswer($event)">
+    </app-question-viewer>
+  </div>
+</div>
+
+<h2>Pipes</h2>
+<ul>
+  <li>
+    Percent - {{0.87 | percent}}
+  </li>
+  <li>
+    uppercase - {{'wow' | uppercase}}
+  </li>
+  <li>
+    lowercase - {{'wow' | lowercase}}
+  </li>
+  <li>
+    date - {{beginDate | date:'dd/MM/yyyy '}}
+  </li>
+  <li>
+    currency - {{23.1 | currency :'EUR'}}
+  </li>
+
+  <li>
+    number - minIntegerDigits.minFractionDigits-maxFractionDigits - {{31.876 | number:'1.5-9'}}
+  </li>
+
+</ul>

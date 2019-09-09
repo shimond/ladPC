@@ -1,0 +1,6 @@
+<div>
+    <div class="qa-item" *ngFor="let q of questions" (click)="onquestionClicked(q)" [class.selected]="q === selectedQuestion">
+        <div> {{q.questionText | suffix:2:'!'}}</div>
+        <span class="time" *ngIf="q.answerTime">{{q.answerTime | date:'HH:mm:ss'}}</span>
+    </div>
+</div>

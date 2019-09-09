@@ -1,0 +1,17 @@
+.ques-container{
+    text-align: center;
+    
+    .options{
+        display: flex;
+        justify-content: space-around;
+        height: 50px;
+    }
+    .correct{
+        background-color: green;
+    }
+    .wrong{
+        background-color: red;
+
+    }
+}
+

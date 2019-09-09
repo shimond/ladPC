@@ -1,0 +1,15 @@
+<div *ngIf="question else empty" class="ques-container">
+    <h2>{{question.questionText}}</h2>
+    <div class="options">
+        <div *ngFor="let op of question.options">
+            <button [class.correct]="isCurrentOptionCorrect(op)" [class.wrong]="isCurrentOptionWrong(op)"
+                [disabled]="question.status !== 'NotAnswered'" (click)="onAnswerClicked(op)">
+                {{op}}
+            </button>
+        </div>
+    </div>
+</div>
+
+<ng-template #empty>
+    <h2>NO QUESTION</h2>
+</ng-template>

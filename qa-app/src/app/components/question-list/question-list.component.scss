@@ -1,0 +1,21 @@
+.qa-item{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 19pt;
+    cursor: pointer;
+    border:2px solid fuchsia;
+    &.selected{
+        border:3px solid navy;
+        font-weight: bold;
+        background-color: crimson;
+    }
+    &:hover{
+        background-color: darkorange;
+    }
+    .time
+    {
+        font-size: 7pt;
+    }
+}
