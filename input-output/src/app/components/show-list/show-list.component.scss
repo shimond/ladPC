@@ -1,0 +1,21 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    max-height: 100vh;
+
+    .show-item{
+        background-size: cover;
+        cursor: pointer;
+        .show-summary{
+            background-image: linear-gradient(to right top, #e6ebf2, #d2e3e9, #c0dbd9, #b8d1c2, #bcc4a9);
+            opacity: 0.2;
+        }
+        h3{
+            background-color: aliceblue;
+        }
+        &.selected{
+            border:  4px solid black;
+        }
+    }
+}

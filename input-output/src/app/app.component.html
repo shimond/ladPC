@@ -1,0 +1,16 @@
+<input type="search" placeholder="Search show" (input)="searchShow(searchBox.value)" #searchBox />
+
+<div class="app-container">
+  <div>
+    <app-show-list
+    [selectedShow]="selectedShowInAppComponent"
+    [shows]="showsFromAppComponent" (showSelected)="setSelectedShow($event)"></app-show-list>
+  </div>
+  <div class="show-details">
+    <img [src]="selectedShowInAppComponent.image.original" />
+    <h2>{{selectedShowInAppComponent.name}}</h2>
+    <div [innerHTML]="selectedShowInAppComponent.summary">
+
+    </div>
+  </div>
+</div>

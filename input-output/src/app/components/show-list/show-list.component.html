@@ -1,0 +1,9 @@
+<div class="container">
+    <div *ngFor="let show of shows" 
+    (click)="showClicked(show)" [class.selected]="show === selectedShow"
+    class="show-item" [ngStyle]="{'background-image': 'url(' + show.image.medium +')'}">
+        <h3>{{show.name}}</h3>
+        <div class="show-summary" [innerHTML]="show.summary">
+        </div>
+    </div>
+</div>

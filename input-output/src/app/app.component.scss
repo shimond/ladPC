@@ -1,0 +1,11 @@
+.app-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    .show-details{
+        padding:20px;
+        img{
+            width: 40%;
+        }
+    }
+}
