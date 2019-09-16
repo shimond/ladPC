@@ -1,0 +1,5 @@
+<div [ngSwitch]="gender">
+    <img *ngSwitchCase="'Male'" class="user-icon" src="./assets/icons/user-male.png" />
+    <img *ngSwitchCase="'Female'" class="user-icon" src="./assets/icons/user-female.png" />
+    <img *ngSwitchDefault class="user-icon" src="./assets/icons/user-other.png" />
+</div>

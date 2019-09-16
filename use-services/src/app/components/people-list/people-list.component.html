@@ -1,0 +1,26 @@
+<div *ngIf="people?.length else notDataTemplate">
+    <h2 appMark color="blue">People list ({{people.length}})</h2>
+
+    <table class="blueTable">
+        <thead>
+            <tr>
+                <th>Gender</th>
+                <th>Full Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of people">
+                <td>
+                    <app-user-icon [gender]="person.gender"></app-user-icon>
+                </td>
+                <td>{{person.fullName}}</td>
+                <td appMark [color]="markColor">{{person.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #notDataTemplate>
+    <h2>NO DATA</h2>
+</ng-template>
