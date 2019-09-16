@@ -1,0 +1,4 @@
+<h2>{{time | date : 'HH:mm:ss'}}</h2>
+<ul>
+    <li (click)="onPersonClick(p)" *ngFor="let p of people">{{p.fullName}} - {{p.email}} - {{p.isActive}}</li>
+</ul>

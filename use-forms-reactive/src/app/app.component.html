@@ -1,0 +1,10 @@
+<h2>{{time | date : 'HH:mm:ss'}}</h2> <button (click)="isPeopleListVisible=true"> View List</button>
+<div *ngIf="isPeopleListVisible">
+  <app-people-list [people]="peopleFromAppComponent" (selectPersonRequested)="onSelectPersonRequested($event)">
+  </app-people-list>
+  <div *ngIf="selectedPerson">
+    <app-edit-person [editablePerson]="selectedPerson" (editingFinished)="onEditingFinished($event)"></app-edit-person>
+  </div>
+  <h1>Add new person</h1>
+  <app-edit-person (editingFinished)="onAddPerson($event)"></app-edit-person>
+</div>

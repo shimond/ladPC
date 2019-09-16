@@ -1,0 +1,42 @@
+<div>
+    <form [formGroup]="personFormGroup" (ngSubmit)="save()">
+        <div>
+            <div>Fullname:</div>
+            <div>
+                <input type="text" formControlName="fullName">
+            </div>
+        </div>
+        <div>
+            <div>Email:</div>
+            <div>
+                <input type="text" formControlName="email">
+                <!-- <div>
+                    {{getErrors('email') | json}}
+                </div> -->
+            </div>
+        </div>
+        <div>
+            <div>Is active:</div>
+            <div>
+                <input type="checkbox" formControlName="isActive">
+            </div>
+        </div>
+        <input type="submit" value="SAVE"  />
+    </form>
+    <!-- <div>
+        {{personFormGroup.errors | json}}
+    </div> -->
+</div>
+
+
+
+<div class="result-container">
+    <div>
+        <h2>Real person</h2>
+        <pre>{{editablePerson | json}}</pre>
+    </div>
+    <div>
+        <h2>Form value</h2>
+        <pre>{{personFormGroup.value | json}}</pre>
+    </div>
+</div>
