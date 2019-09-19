@@ -1,0 +1,39 @@
+<app-layout>
+
+  <app-products-count></app-products-count>
+
+  <div class="product-container">
+    <table *ngIf="products?.length">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Image</th>
+          <th>Expire</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products" (click)="setSelectedProduct(p)">
+          <td>{{p.name}}</td>
+          <td>{{p.price | currency}}</td>
+          <td><img class="product-pic" [src]="p.imageUrl"></td>
+          <td>{{p.expireDate | date}}</td>
+          <td>
+            <button (click)="deleteProduct(p.id)" mat-mini-fab aria-label="Example icon-button with a heart icon">
+              <mat-icon>face</mat-icon>
+            </button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button (click)="add()" mat-raised-button color="primary">
+    Add new product
+    <mat-icon>add</mat-icon>
+
+  </button>
+  <app-product-edit [product]="selectedProduct" (productEditingFinished)="onProductEditingFinished($event)"
+    *ngIf="selectedProduct"></app-product-edit>
+
+
+</app-layout>
