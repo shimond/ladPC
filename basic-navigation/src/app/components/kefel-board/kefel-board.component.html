@@ -1,0 +1,8 @@
+<div class="board">
+    <div class="item" *ngFor="let value of values" [routerLink]="['/','result', value.x, value.y]"
+        [queryParams]="{isAdmin:true, title : value.x + ' * ' + value.y }">
+        <div>
+            {{value.x}} * {{value.y}}
+        </div>
+    </div>
+</div>

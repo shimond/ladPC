@@ -1,0 +1,20 @@
+.board{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100%;
+    align-items: center;
+
+    .item{
+        display: grid;
+        height: 100%;
+        border: 2px solid chocolate;
+        border-radius: 9px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            background-color: aquamarine;
+        }
+    }
+    
+}

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="header">
+    <h2>My Web site...</h2>
+    <a routerLink="/">Home</a> |
+    <a routerLink="/kefel">Kefel board</a> |
+    <button (click)="routeToKefel()">Kefel board</button> |
+    <a routerLink="/result/90/90">90 * 90</a> |
+    <a routerLink="/result/101/8">101 * 8</a> |
+    <a routerLink="/about">about</a> |
+    <a [routerLink]="['/' , 'about']">about</a>
+    <div>
+      <marquee>Ayelet Metayelet.</marquee>
+    </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer">
+    <div>
+      &copy; Johnbryce course - angular 2019.
+    </div>
+  </div>
+</div>
